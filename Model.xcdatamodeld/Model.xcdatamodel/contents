@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Categoria" representedClassName="Categoria" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tarefas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tarefa" inverseName="categoria" inverseEntity="Tarefa" syncable="YES"/>
+    </entity>
+    <entity name="Tarefa" representedClassName="Tarefa" syncable="YES">
+        <attribute name="dataInsercao" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categoria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="tarefas" inverseEntity="Categoria" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Categoria" positionX="394" positionY="201" width="128" height="73"/>
+        <element name="Tarefa" positionX="160" positionY="192" width="128" height="133"/>
+    </elements>
+</model>
